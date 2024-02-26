@@ -1,0 +1,62 @@
+/* General Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+p {
+    margin: 15px auto;
+    width: 90%;
+    max-width: 800px;
+    text-align: justify;
+}
+
+/* Parallax Section Styles */
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Text Section Styles */
+.text-section {
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .parallax {
+        height: 50vh;
+    }
+
+    .text-section {
+        padding: 20px 10px;
+    }
+
+    p {
+        width: 95%;
+    }
+}
