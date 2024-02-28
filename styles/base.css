@@ -1,62 +1,326 @@
-/* General Styles */
-body, html {
+/* base.css content */
+
+/* Ensure full height for parallax sections and no extra margin for body */
+html, body {
+    width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    overflow-x: hidden;
-}
-
-h1, h2 {
-    text-align: center;
-    margin: 0.5em 0;
-}
-
-p {
-    margin: 15px auto;
-    width: 90%;
-    max-width: 800px;
-    text-align: justify;
-}
-
-/* Parallax Section Styles */
-.parallax {
-    height: 100vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    background: linear-gradient(235deg,#0725cf,#0008ff,#ffcc00);
     align-items: center;
 }
 
-.content {
+
+h1.display-4.font-weight-bold {
+    margin-top: 300px;
     color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
 }
 
-/* Text Section Styles */
-.text-section {
-    padding: 40px 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
+h1, h2, h3 {
+    font-family: 'Gloock', serif;
+    text-align: center;
 }
 
-/* Responsive Styles */
-@media only screen and (max-width: 768px) {
+h1, h2 {
+    color:#000000;
+    box-shadow: 0 0 40px rgb(255, 255, 255);
+    margin-top: 0px; /* Or adjust as needed to give space above */
+    z-index: 1; /* Ensure these are below the gallery */
+}
+
+h3 {
+    font-size: 20px;
+    color: #000000;
+}
+
+p.lead {
+    color: rgb(255, 255, 255);
+}
+
+p {
+    line-height: 1.6; /* Increased line-height for readability */
+    color: rgb(0, 0, 0); /* Lighter text color for body text */
+}
+
+/* Header styles */
+header {
+    position: relative;
+}
+/*Navigation Menu*/
+#mainNav {
+    width: auto;
+    position: relative; /* position set to relative so 3D picture gallery can go down to the middle*/
+    top: 0px; /* Adjust as needed to position where you want on the hero image */
+    left: 0;
+    right: 0;
+    z-index: 10; /* Makes sure the navigation is always on top */
+    display: flex;
+    align-items: center;
+    border-color: #000000;
+    border-width: 6px;
+    border-style:inset;
+    background: linear-gradient(235deg,#0c042e,#2196F3,#000000);
+    margin-bottom: 300px;
+    box-shadow: 0 0 50px black;
+    justify-content: space-between;
+}
+
+#mainNav img {
+    float: left;
+    border-radius: 50px;
+}
+
+.nav img {
+    width: 120px;
+}
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav li {
+    gap: 50px;
+
+}
+
+.nav a:hover {
+    background-color: var(--nav-hover-background-color);
+}
+
+.hero-text {
+    font-family: 'Gloock', serif;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 6em;
+    background: radial-gradient(circle at center, red, blue, orange);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Fallback for non-WebKit browsers */
+    background-color: transparent;
+    opacity: 0.9;
+    z-index: 1;
+    
+}
+
+.hero-text p {
+    color: white;
+}
+
+.hero {
+    background-size: cover;       /* Cover the full view of the container */
+    background-repeat: no-repeat; /* No repeat of the image */
+    background-position: center;  /* Center the background image */
+    height: 400px;          /*mobile view and medium view Hero image appears*/   
+    width: 100%;                  /* Take full width of its container */
+}
+
+
+
+/* Navigation links espacio */
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    flex: 1; /* Make each list item take up equal space */
+}
+ 
+/*Hides the Navigation menu on mobile view*/
+.navigation li {
+    display: none;
+}
+
+/*Navigation links menu*/
+.navigation li a {
+    display: block;
+    text-align: center;
+    font-family: 'Gloock', serif;
+    text-decoration: underline;
+    color: var(--nav-link-color);
+    transition: color 0.3s ease;
+    font-size: 30px;
+}
+
+
+/*Navigation links hover background*/
+.navigation li a:hover {
+    background: linear-gradient( rgb(39, 179, 230),blue);
+    font-weight: 700;
+    box-shadow: 0 0 2rem #ffffff !important; /* Optional, adds a glow effect */
+}
+
+.container {
+    --d: 55s; /* duration */
+    display: grid;
+    grid-template-columns: repeat(3, 500px); /* number of visible elements + width */
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, #0000, #000 5% 95%, #0000);
+  }
+  
+
+  /* Manually calculated animation delays */
+  .container > div:nth-child(1) { animation-delay: calc(-1 * var(--d) * 0/6); }
+  .container > div:nth-child(2) { animation-delay: calc(-1 * var(--d) * 1/6); }
+  .container > div:nth-child(3) { animation-delay: calc(-1 * var(--d) * 2/6); }
+  .container > div:nth-child(4) { animation-delay: calc(-1 * var(--d) * 3/6); }
+  .container > div:nth-child(5) { animation-delay: calc(-1 * var(--d) * 4/6); }
+  .container > div:nth-child(6) { animation-delay: calc(-1 * var(--d) * 5/6); }
+  
+  @keyframes r {
+    16.666666667% { transform: translate(-100%); } /* 100/6 */
+    16.676666667% { transform: translate(500%); } /* (6-1)*100/6, with a small increment for continuous animation */
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    
+   
+  }
+  .box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation: slid 120s linear infinite; /* Controls how fast the 3D pic gallery rotates and moves*/
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;   /* Centers the gallery */
+    z-index: 5; /* Below the nav but above other content */
+  }
+  
+  .box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;      /*controls the width of the images on the 3D gallery*/
+    height: 90%;     /*controls the height of the images on the 3D gallery*/
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(375px); /*Controls how wide the Gallery opens upp*/
+  }
+  .box span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1px;
+    object-fit: cover;
+    transition: 2s;
+  }
+  .box span:hover img {
+    transform: translateY(-50px) scale(1.5);
+  }
+  @keyframes slid {
+    0% {
+      transform: perspective(1000px) rotatex(0deg) rotatey(35deg);
+    }
+    100% {
+      transform: perspective(1000px)  rotatex(360deg) rotatey(35deg)rotateY(360deg);
+    }
+  }
+
+/* Parallax Section Styles */
+.parallax {
+    min-height: 100vh; /* Full viewport height */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Overlay for better readability on parallax backgrounds */
+.parallax::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /*background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+/* Text Styling for Parallax Sections */
+.parallax .display-4, .parallax .lead {
+    position: relative; /* Ensures text is above the overlay */
+    z-index: 1;
+}
+
+
+/* Biography Content Sections */
+.container section {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: rgb(220, 212, 212); /* White background for content */
+    border-radius: 0.5rem; /* Slightly rounded corners for aesthetics */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+/* Biography Content Sections */
+.container .py-5 {
+    text-align: center;
+}
+
+/* Centering the content */
+.container .row .mx-auto {
+    margin: 0 auto; /* Ensure that content is centered */
+}
+
+/* Style for sections */
+section {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #2533b3;
+}
+
+.footer-content, .footer-info {
+    margin: 0 auto; /* Center footer content */
+    padding: 1rem;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 692px) {
     .parallax {
-        height: 50vh;
+        background-attachment: scroll; /* Fixes parallax on mobile */
+    }
+}
+
+/* Additional responsiveness for smaller devices */
+@media (max-width: 468px) {
+    .container section {
+        padding: 1.5rem 1rem;
     }
 
-    .text-section {
-        padding: 20px 10px;
+    .parallax {
+        background-attachment: scroll; /* Disable fixed background on mobile */
+    }
+    .navigation {
+        flex-direction: column;
+        align-items: center;
     }
 
-    p {
-        width: 95%;
-    }
 }
