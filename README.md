@@ -1,5 +1,5 @@
 # Columbia University JTC-Website-Project
-Etra credit for JTC
+Extra credit for JTC
 
 # Marco Quintero: A Journey from the Soccer Field to Software Engineering
 
