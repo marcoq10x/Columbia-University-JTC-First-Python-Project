@@ -1,5 +1,5 @@
-# Columbia University JTC-First-Python-Project
-Etra credit for JTC
+# Columbia University JTC-Website-Project
+Extra credit for JTC
 
 # Marco Quintero: A Journey from the Soccer Field to Software Engineering
 
@@ -10,7 +10,7 @@ journey of transformation from a maxillofacial oral surgeon to pursuing my passi
 
 ## Background and Education
 My early years were spent between the lush landscapes of Colombia and the sun-kissed beaches of the Bahamas, a blend of 
-cultures that shaped my worldly perspective. Played for the Men's Soccer NAtional Team of the Bahamas and moved to resume playing in the USA where shaping my discipline and 
+cultures that shaped my worldly perspective. Played for the Men's Soccer National Team of the Bahamas and moved to resume playing in the USA where shaping my discipline and 
 teamwork skills took place. Later, I delved into the intricate world of oral maxillofacial surgery, acquiring a meticulous eye for detail and skill for meticulous work. 
 Adversity struck, and with resilience, I pivoted toward technology, currently studying software engineering at Brigham Young University.
 
