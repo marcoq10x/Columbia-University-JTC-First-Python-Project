@@ -1,14 +1,17 @@
 /* base.css content */
 
 /* Ensure full height for parallax sections and no extra margin for body */
-html, body {
-    width: 100%;
+    body {
+    position: relative;
+    max-width: auto;
+    width: auto;
     height: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevents horizontal scroll */
     background: linear-gradient(235deg,#0725cf,#0008ff,#ffcc00);
     align-items: center;
+    justify-content: center;
 }
 
 
@@ -18,13 +21,13 @@ h1.display-4.font-weight-bold {
 }
 
 h1, h2, h3 {
-    font-family: 'Gloock', serif;
+    font-family:"Lavishly Yours",cursive;
     text-align: center;
 }
 
 h1, h2 {
     color:#000000;
-    box-shadow: 0 0 40px rgb(255, 255, 255);
+    box-shadow: 0 0 40px rgb(0, 6, 183);
     margin-top: 0px; /* Or adjust as needed to give space above */
     z-index: 1; /* Ensure these are below the gallery */
 }
@@ -61,7 +64,7 @@ header {
     border-width: 6px;
     border-style:inset;
     background: linear-gradient(235deg,#0c042e,#2196F3,#000000);
-    margin-bottom: 300px;
+    margin: 0px 0px 300px 0px;
     box-shadow: 0 0 50px black;
     justify-content: space-between;
 }
@@ -79,6 +82,12 @@ header {
     list-style-type: none;
     display: flex;
     gap: 20px;
+    padding:0%;
+    margin: 0px, 20px, 0px, 0px;
+}
+
+ul.navigation {
+    padding: 0px;
 }
 
 .nav li {
@@ -112,15 +121,6 @@ header {
     color: white;
 }
 
-.hero {
-    background-size: cover;       /* Cover the full view of the container */
-    background-repeat: no-repeat; /* No repeat of the image */
-    background-position: center;  /* Center the background image */
-    height: 400px;          /*mobile view and medium view Hero image appears*/   
-    width: 100%;                  /* Take full width of its container */
-}
-
-
 
 /* Navigation links espacio */
 .navigation {
@@ -132,7 +132,8 @@ header {
  
 /*Hides the Navigation menu on mobile view*/
 .navigation li {
-    display: none;
+    display:flex;
+    justify-content: center;
 }
 
 /*Navigation links menu*/
@@ -140,18 +141,21 @@ header {
     display: block;
     text-align: center;
     font-family: 'Gloock', serif;
-    text-decoration: underline;
-    color: var(--nav-link-color);
+    text-decoration: double;
+    color: white;
     transition: color 0.3s ease;
-    font-size: 30px;
+    font-size: 50px;
+    margin: 0px 60px 0px 0px;
 }
 
 
 /*Navigation links hover background*/
 .navigation li a:hover {
-    background: linear-gradient( rgb(39, 179, 230),blue);
+    background: linear-gradient( rgb(0, 0, 0),blue);
+    border-radius: 50px;
     font-weight: 700;
-    box-shadow: 0 0 2rem #ffffff !important; /* Optional, adds a glow effect */
+    box-shadow: 0 0 2rem #ffffff; /* Optional, adds a glow effect */
+
 }
 
 .container {
@@ -233,7 +237,7 @@ header {
 .parallax {
     min-height: 100vh; /* Full viewport height */
     background-attachment: fixed;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -302,6 +306,64 @@ footer {
 }
 
 
+/* Footer styles */
+footer {
+    background-color: #ffffff;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 0 50px black;
+    border-color: #000000;
+    border-width: 3px;
+    border-style: solid;
+    background: linear-gradient(235deg,#0c042e,#2196F3,#000000);
+}
+
+.footer-content, .footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/*edits ContactUs info*/
+footer p{
+    margin: 0 0px;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0px 0px 0px 30px;
+}
+
+.footer-content img, .social-icons img {
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #000000;
+    border-width: 3px;
+    margin: 20px 0;
+}
+
+.contact {
+    margin-left: 20px;
+}
+
+div.footer-info {
+    gap: 20px;
+    
+}
+
+
+.footer-info  p {
+    color: white;
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 692px) {
     .parallax {
@@ -323,4 +385,10 @@ footer {
         align-items: center;
     }
 
+}
+
+@media (max-width: 220px) {
+    .parallax {
+        background-attachment: scroll; /* Fixes parallax on mobile */
+    }
 }
