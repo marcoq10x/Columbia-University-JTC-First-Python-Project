@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="web page for the Palm Beach Chamber of Commerce | Connecting Local Businesses | Networking, Business Growth & Community Support"><!--Brief description of page 150-160 characters-->
+    <!--open Graph Meta properties-->
+    <meta property="og:title" content="Palm Beach Chamber of Commerce Home Page">
+    <meta property="og:description" content="web page for the Palm Beach Chamber of Commerce | Connecting Local Businesses | Networking, Business Growth & Community Support">
+    <meta property="og:image" content="https://media.architecturaldigest.com/photos/5aabea00d91fc303af5439c1/16:9/w_2240,c_limit/Fisher_0418.JPG">
+    <meta property="og:url" content="https://marcoq10x.github.io/wdd230/">
+    <meta property="og:type" content="website">
+    <meta name="author" content="Marco Quintero">
+
+    <title>Palm Beach Chamber of Commerce</title>
+    
+    <!--Font links-->
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Roboto+Serif:opsz,wght@8..144,300&display=swap" rel="stylesheet">
+    <!-- CSS links -->
+    <link rel="icon" href="/wdd230/chamber/images/favicon.ico">
+    <link rel="stylesheet" href="/chamber/styles/normalize.css">
+    <link rel="stylesheet" href="/chamber/styles/base.css">
+    <link rel="stylesheet" href="/chamber/styles/medium.css">
+    <link rel="stylesheet" href="/chamber/styles/larger.css">
+</head>
+<body>  
+    <header>
+        
+        <nav id="mainNav">
+            <button id="hamburger" onclick="toggleMenu()"></button>
+            <a href="index.html">
+                <img src="/chamber/images/logo.webp" width=90 height=90 alt="Chamber logo" id="logo" loading="lazy">
+            </a>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+        
+        <div class="hero">
+            <!--
+            <picture>
+                <source srcset="/wdd230/chamber/images/LargeHeroS.webp" media="(max-width: 480px)">
+                <source srcset="/wdd230/chamber/images/LargeHeroM.webp" media="(max-width: 1000px)">
+                <img src="/wdd230/chamber/images/LargeHeroL.webp" alt="Large Hero Image" width="986" height="657">
+            </picture>--> 
+            <div class="event-banner">
+                <p>🎉 Join us for our Meet and Greet event on Wednesday at 7:00 p.m.! 🫱🏻‍🫲🏼</p>
+                <button class="close-banner">𝕏</button>
+            </div>
+            
+            <div id="mode">
+                😎
+            </div>
+            <div class="hero-label"> 
+            <a href="join.html">
+                <p>Join Now</p>
+            </a>
+              </div>
+            <div class="hero-text">
+                <p>Palm Beach</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1>~Palm Beach Chamber of Commerce~</h1>
+        <h2>Welcome</h2>
+
+        <section class="cards">
+            <div class="card">
+                <h3>Weather Conditions</h3>
+                
+                <p>Temperature: <span id="temp-value">70</span>°F</p>
+                <p>Humidity: 65%</p>
+                <p>Wind Speed: <span id="wind-speed-value">7</span> mph</p>
+                <p>Wind Chill: <span id="wind-chill-value">N/A</span></p>
+                    <p>Current Temperature 
+                    <br><span id="current-temp"></span></p>
+                    <figure>
+                        <img id="weather-icon" src="path/to/placeholder/image" alt="Weather icon placeholder">
+                        <figcaption></figcaption>
+                    </figure>
+            </div>
+            <div class="card">
+                <h3>Events</h3>
+                
+                <p>Beach Cleanup - Oct 25th</p>
+                <p>Music Festival - Nov 3rd</p>
+                <p>Local Market - Every Saturday</p>
+                <figure>
+                    <picture>
+                        <source srcset="/chamber/images/sunset.webp" media="(max-width: 480px)">
+                        <img src="/chamber/images/sunset.webp" alt="Sunset down in Palm Beach" loading="lazy" width="150" height="150">
+                    </picture>
+                </figure>
+                <figure>
+                    <picture>
+                        <source srcset="/chamber/images/beachclean.webp" media="(max-width: 480px)">
+                        <img src="/chamber/images/beachclean.webp" alt="Sunset down in Palm Beach" loading="lazy" width="150" height="150">
+                    </picture>
+                </figure>
+            </div>
+            <div class="card">
+                <h3>Company Spotlight Ad</h3>
+                <div class="company-spotlight-container">
+                    <!-- Dynamic content goes here -->
+                </div>
+            </div>
+        </section>
+        <div id="forecast-container"></div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <a href="index.html">
+                <img src="/chamber/images/logo.webp" width=90 height=90 alt="Chamber logo" id="logo2" loading="lazy">
+            </a>
+            <div class="contact">
+                <p>Contact Us.</p>
+                <p>700 Royal Palm Avenue, suite 107</p>
+                <p>Palm Beach, Fl 33414</p>
+                <p>(561)777-7777</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://instagram.com" target="_blank">
+                    <img src="/chamber/images/instagram.webp" alt="Instagram icon" width="60" height="60" loading="lazy">
+                </a>
+                <a href="https://facebook.com">
+                    <img src="/chamber/images/facebook.webp" alt="Facebook icon" width="60" height="60" loading="lazy">
+                </a>        
+                <a href="https://linkedin.com">
+                    <img src="/chamber/images/linkedin.webp" alt="LinkedIn icon" width="60" height="60" loading="lazy">
+                </a>
+                <a href="https://youtube.com">
+                    <img src="/chamber/images/youtube.webp" alt="YouTube icon" width="60" height="60" loading="lazy">
+                </a>
+            </div>
+        </div>
+    <hr>
+        <div class="footer-info">
+            <p>Copyright © <span id="currentYear"></span> .:|:. Palm Beach Chamber .:|:. WDD 230 Project .:|:. Marco Quintero </p>
+            <p style="color:#FFFDD0;">Last Updated: <span id="lastModified"></span></p>
+        </div>
+        <script src="/chamber/scripts/lastmod.js"></script>
+        
+        <script src="/chamber/scripts/banner.js"></script>
+        <script src="/chamber/scripts/spotlight.js"></script>
+    </footer>
+    <script src="/chamber/scripts/windchill.js"></script>
+</body>
+</html>
