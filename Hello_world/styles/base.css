@@ -1,0 +1,13 @@
+body {
+    background: linear-gradient(235deg,#c6c9dd,#040516,#ffcc00);
+    font-family: 'Arial', sans-serif;
+}
+
+header h1 {
+    color: #007bff;
+}
+
+section p {
+    font-size: 1.2rem;
+    color: rgb(236, 230, 230);
+}
